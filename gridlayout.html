@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid & media quries</title>
+</head>
+<style>
+    html{
+        margin: 0;
+        padding:0 ;
+        box-sizing:border-box ;
+    }
+    main{
+        width:1200px ;
+        height: 400px;
+        background-color: antiquewhite;
+        margin:0 ;
+        display: grid;
+        grid-template-columns: repeat 4,1fr;
+        gap: 20px;
+        /* font-size: 18px; */
+    }
+    .box{
+        background-color:#32a88b ;
+        height: 300px;
+    }
+    .box:nth-child(even){
+        background-color: orange;
+         min-height: 20px; 
+    }
+    /* @media screen and (min-width:275px)(max-width:768px){
+        main{
+            display: grid;
+            width:90% ;
+            grid-template-columns:repeat(1,1fr) ;
+            gap:20px ;
+        }
+        @media  screen and (max-width:768px) {
+            main{
+                display:grid ;
+                width:90% ;
+                grid-template-columns:repeat(2,2fr) ;
+                gap: 20px;
+            } */
+            
+        /* } */
+     #lft_rgt{
+        display:grid ;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px ;
+    }
+    .box_left,
+    .box_right{
+        background-color: #7f32a8;
+    }
+    p{
+        font-size: 5vh;
+    } 
+</style>
+<body>
+    <h1>Hello abes</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque id consequuntur sit ullam quo minus atque distinctio architecto hic! Maxime veniam fuga quasi atque deleniti? Harum soluta facilis quos odio?</p>
+        <main>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box" id="lft_rgt">
+        <div class="box_left">left</div>
+        <div class="box_right">right</div>
+    </div>
+    <div class="box">4</div>
+</main>
+</body>
+</html>
